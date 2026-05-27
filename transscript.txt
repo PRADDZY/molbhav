@@ -1,0 +1,619 @@
+
+
+Om Asnani (05:23)
+Got it. Perfect, I think, uh, with that, I think, uh, I let, uh, you know, Arjun leave for the day. Uh, you know, I know he's busy, definitely, and the voice was slightly cracking, which is work is calling again, so I think that's a sign. Thank you so much, Arjun, for joining us. I think, let me quickly take them through, uh, what do we have in store for us over the next 7 days. And I think, uh, yeah, if you have something, we'd love to have you again sometime.
+
+Arjun Gupta (05:51)
+Great, great, great, yeah, thank you, and thank you everyone for joining this. I'm sure, like, Om would help you answer all the Mark. Time, always there at the backend from the openai team like looking and supervising this from our end, and.
+
+Arjun Gupta (06:02)
+Would love to, very excited, to see what all you can build, and what submission we could have. So please give your best shot at building what you do, and also please share everything on social media, so that we keep seeing.
+
+Arjun Gupta (06:13)
+Like what you guys are building so own would like, give you like entire format. What to post when to post, and. How to make it social, so. Yeah, I'm looking forward for it. Okay, then, Om, thank you so much, I'll take a leave now. Thank you. Bye.
+
+Om Asnani (06:28)
+Thank you, Arjun, for quickly joining and setting the stage, I think. Folks, what I'll do is, for the next some time, I'll take you through what do we have in store, and what's expected out of you. We have already about 750 people that are in that. I stopped the chat for some time because I see people were links. Folks, you will get the time of networking also. The hackathon is not really designed to help you build products, but also, uh, you know, to sort of help you, uh, get the right network. But please do not spam. Uh, you know, let's all be professional, we are all professionals here. And, uh, over the next 7 days, we shipping and fun and learning as well, right? So, as Arjun said the stage for us, I'll quickly share the screen.
+
+Om Asnani (07:10)
+And, uh, sort of get started on what do we have in store for all of you, okay? Give me one quick second. Perfect. The call will be going till 8pm, we'll try to finish till 8, and if you have questions, we'll stay back till 8.15, uh, you know, and do that as well, right? I'll try to answer all of the questions in the deck, it's already there, but just in case if you are, you know, unable to, uh, we'll take that question then as well, right? And make sure most of you who can take, uh, you know, who can be on camera, please be on camera, it will be sort of lovely to see all of you together as well. Normally 三。 There are a webinar, so you know we don't see you, but i think would be wonderful to see you as well, for all of you are raising hands. We'll come to that right very quickly. Let me share. What do we have.
+
+Om Asnani (07:54)
+once give me one second. I'll start sharing my screen, and the team will turn the chat on and off as we go about it, okay? One second. Perfect. Uh, where are we? Where are we? Perfect.
+
+Om Asnani (08:21)
+Perfect, perfect. Can you all give a thumbs up if you're all able to see the screen? Also, in the chat, just a quick yes would do. A quick yes would do.
+
+Om Asnani (08:33)
+Perfect, perfect, perfect. Perfect. The chat will be off. Karthik, turn the chat on and off as I sort of go, uh, you know, in detail in toward. Once again, welcome everybody to AI Builders Hackathon. Uh, we thought, why not, you know, two brands come together, somebody who leads tech in the world, and somebody who leads education come together and build something interesting.
+
+Om Asnani (08:55)
+So, once again, welcome with genuine gratitude. You have come through, you know, multiple channels. Most of you have seen our promotional ads, or not ads, the post on ChatGPT India's channel, your Outskills channel, WebUps, Reel, uh, you know… quite a few things. So what we are going to do is we are going to build and ship a product in the next 7 days, and how exactly we are here through that is what I'm going to cover. We are exactly at Monday, 7pm, and we try to aim this for a 7-day thing, and end at Sunday evening, 7pm, right? Now, what exactly this is going to look like, I'll quickly cover that. Most of you, most of the questions, you would already know how a normal hackathon happens.
+
+Om Asnani (09:35)
+But what are we here to do along with you? Where can we help you is what I'm going to go deeper on slightly more, okay? The chat will be on and off, as I said, so if you're not able to chat, it's not your problem or Zoom's problem, we have kept it off at this point of time, right? Whenever you sort of ask questions, we'll keep it on and off. Perfect. Let's get to it. So, we wanted to sort of do a slightly more curated one.
+
+Om Asnani (09:57)
+That's why you see a lot of people coming in. Uh, we've got almost about 10,000 entries, uh, in the last 7 to 10 days that we were able to promote, and we thought, okay, what do we do with 10,000 people, right? Do we want to do such a big one? No. We wanted to make it slightly more curated one, so that is why we asked for your LinkedIn profiles, that is why we asked you for your ideas, and that is why we asked you for your GitHub.
+
+Om Asnani (10:23)
+profile. So everybody went through a first shortlist of 3500 people. We told you we may give you an outcome in 24 hours, but we took slightly more time because of the response that we got. So, almost 3,500 people came down, and in the last two days, in Saturday and Sunday, is where we spend time on actually drilling it down to 1,000 people, uh, that we shortlisted. Builders whose ideas were very interesting, a real pain point that we think from our side, that could be a real addition to the world. Along with that, you had a developer background, either in your sort of work or in your GitHub activity, either you are an indie hacker, or you are a builder, or you are a senior tech professional trying to solve, right? In the chat, very quickly, which countries, you all are joining us from.
+
+Om Asnani (11:09)
+Can we drop it in the chat? The chat is on now. Where are you joining in from? Quickly? Majority of you definitely will be from India. definitely. But which region in India, which region are you from India?
+
+Om Asnani (11:27)
+Interesting. Interesting. Got it. And can you all type in who are you? Are you an indie hacker? Are you a tech professional? Are you an engineer? A lot of people are CTOs, data analysts, everyone around developer ecosystem is here with us. Love to see that.
+
+Om Asnani (11:49)
+Wonderful, wonderful, wonderful. I'll keep the chat off one more time. Perfect, perfect. So, if you have made it, if you have made it, congratulations. If you did not hear it on our emails and WhatsApp before, uh, congratulations, you have made it, uh, you are at least in the first 10% of the 10,000 entries that we received. So, uh, in order to become the top 1%, That's what the next 7 days will decide, and how is where you get help from us and the OpenAI team. Now, welcome, once again. What we are looking for is four things. This is what we are going to cover in today's conversation, and you should have something live by the end of next 7 days, is the single line outcome, or the KPI, as you could say, right? AI has changed how products get built, right?
+
+Om Asnani (12:33)
+We used to take about good 3 months to ideate, plan, strategize, get to a TAM and ideation, and also launch our first MVP would be looking like a 6-month journey. But today, one person can build what once required an entire team.
+
+Om Asnani (12:46)
+Right? And a lot of you already, right, the ideas that you submitted, you would already have a few very small version of the MVPs, or prototypes already, right? In just 2 to 3 hours, if you spend good time, a first draft of MVP ships out, and that's what You know, is the power of today. And there are agents which are already 24-7 running, uh, codecs also very actively promoting and working on that feature coming out, and uh… what we are going to do is we are going to spend not just 2 hours or 24-7, but just beyond that, we're going to share a proper 7-day commitment. Now, why 7 days? You may be able to ship out a good, beautiful MVP that you can share with your team, use 10-15 members can use it.
+
+Om Asnani (13:27)
+But it will still be limited to that. What we want to do is actually focus on developing something that could go live to thousands of people, and something that comes out of you, right? So that's why we have kept it a 7-day and not a 1-day, or a 2-day, or 3-day, or a 24, uh, you know, day, or a month-long activity, because before, a product before, and if your idea is selected, uh, okay, let me check this before we get details into that, right? How many of you are first-time builders, and how many of you are second-time or third-time or fourth-time builders in the chat?
+
+Om Asnani (14:04)
+In the chat. Is this your first time, or are you a regular one? We have quite a mixed bag of audience, as I saw in the selection, but would like to see in the chat as well, quickly.
+
+Om Asnani (14:21)
+అల్డ్ రెగ్యులర్ బిల్డర్స్. ఫస్ట్ టైమ్ బిల్డర్స్, మ్యూజిక్. A lot of your regular builders, a lot of your regular builders, so you exactly know, exactly know the kind of problem statements that people would be facing. But all of you who are first-time builders, it's going to be amazing, right? And as I said, it's not going to be just you building in silos, you'll get to meet a lot of these people who are on the call with me, and uh… We'll do a lot of activities, but all the ideas, all the products are going to be built individually, and these are the same ideas that you have, sort of, sort of registered on the portal with, right? So there are two ecosystems, and you know why we thought to do this?
+
+Om Asnani (14:50)
+OpenAI, which works at Frontier of AI models and APIs, along with the Codex ecosystem, going very deep into developer ecosystem and, you know, changing the plateau there. AI-native workflows is what it is known for, and the kind of innovations it has been able to do, and we actually believe it's going to be the future of software that goes to B2C and B2B ecosystems. And then you have outskill, right? A lot of you people know already, right? You come from our ecosystems already, which is focused on building the developer ecosystem, building on engineers' vertical very actively, and also looking at building the journalist vertical as well. We have been, from the time ChatGPD launched, we were the first ones in the world to sort of launch the first ChatGPT workshop, and today we are the first ones to sort of, you know, partner with OpenAI and bring this developer ecosystem a tool, a platform, to sort of, you know, propel from here. So, uh, we have had mentors who have shipped, we have had builders who have shipped, we have been individually working on the culture of shipping inside of a lot of our ecosystem. A lot of our programs that we do are, you know, almost at a nominal cost or completely free, actually dedicating to build the next generation of workforce, and it's truly an execution ecosystem. So why don't we join forces?
+
+Om Asnani (16:08)
+And give that access to OpenAI's capabilities to the hands of people who are going to build the future of tomorrow, specifically India. Right? And that's why we did this. We are early in the year in Item era, a lot of us know this, a lot of us are You know, first-time builders, very few, but regular builders already know. Solo builders are winning today. It is the age of builders who can ship products And distribution is also open at the same time. It's not a way or, you know, the time when you had to put money and sort of a lot of, you know, traction into just getting those distributions, but also, now, by going into a built-in public narrative, doing a lot of activities outside along with building a product, you can get that distribution and see, actually, traction in your product. And execution today is cheap.
+
+Om Asnani (16:54)
+There was a time when all the engineering, all building these MVPs, it used to cost a lot in terms of hiring an agency to test out the idea, or building a product, or you itself. You needed at least 3 to 4 people, but today, it doesn making startups move faster, right? So there are three stages that we are going to work on.
+
+Om Asnani (17:15)
+During the next 7 days, the phase one is starting the build, which is today. We have already gotten started, right? If you read the email properly, it was mentioned that the next step is building, right? There are no hiccups in between what is required from you at this point of time is building. You already submitted your ideas based on that on which you got selected. The next steps from here is, you will start to build on these ideas, and there'll be two checkpoints, right? The first checkpoint will come in on day 3, which is Wednesday, right? So what will happen is, it is an MVP checkpoint. Now, what exactly MVP checkpoint?
+
+Om Asnani (17:52)
+That is, whatever ideas that you have, we would like to have a very small toy version of it. What is a toy version? Something that is workable. It may not be beautiful, it may sort of not be a ready live product, but we would like to see how your user flow comes in, what are your screens
+
+Om Asnani (18:31)
+We would expect you to submit a one-pager document on why you selected this idea, what exactly your hypothesis is to build and solve this, and at the same time, a live walkthrough, a demo of your product.
+
+Om Asnani (18:45)
+me, you, recording a video of how you would give a demo. If you are pitching this product, if you are sort of taking it to thousands of people, that's what we would expect from you. Now, how exactly this is going to run through? I'll iterate one more time.
+
+Om Asnani (18:56)
+Today, we are at phase 1, or Day 1. You will start to build whichever idea that you have picked, that's the idea that you need to build on top of. Uh, if you want to change, uh, We don't, uh, want you to change the idea, because that's the main front of, uh, you know, your submission and application. Once you submit, we'll be matching in terms of whatever you have given us in terms of idea, and what you actually build, right? So you may face slight challenges there.
+
+Om Asnani (19:24)
+Right now, what you need to do is, whatever idea you have, start slightly more researching on, okay, what is the TAM? Who exactly will be the target audience? Who exactly is this product going to help, and in what way, right? Start with that, and then start building an MVP by day 3, Wednesday. Along with that, what you will receive from us is daily, you will receive nudges and check-in, uh,
+
+Om Asnani (20:05)
+Majorly to help the first-time builders have some structure, and also people who are sort of working out, or who have the, you know, time-taking and very dedicated jobs. You have that time, right? We expect you to spend about good, uh, you know, one to two hours every day to build this and sort of sharpen it. You can choose to do more or less
+
+Om Asnani (20:51)
+There are two live sessions that will happen. Right? One is when we'll do a session on Wednesday at the same time, 7pm IST. And next session, that will happen on Friday, right? Now, what these sessions will help you with, these sessions will help you with on a lot of questions that you might get stuck with. Okay, I'm trying to build a healthcare app, I got stuck with this API, I got stuck with… I'm not able to find this data. Whatever these questions that you have, we'll cover that. Second, we'll also give you nitty-gritties of how can you use AI better, uh, to sort of get to your outcome, right? What are the right way of using AI? What is the right way of saving tokens, or sort of doing that? So we'll do a mix of workshop and a Q&A, so you get that particular help. Friday, when we come back, on a session, Once again, we look at a lot of your MVPs will share, sort of, feedback on what exactly a lot of people have been able to achieve and build, and we'll give you some direction in terms of how a business is built, how a product is built, what are the next steps, how do you Validate the idea and the user flow at the same time. So before we finish on Sunday, you have that feedback coming in, you have all the expertise that you need in order to build not only a shippable version, but something that you can launch to thousands of people. They can use it and give you feedback. The idea, folks, of this hackathon is not only, definitely, to product, but also to see if we can help you get traction. And I'll tell you how we will make… enable that, if you are one of it, right? And it's not… and it… you will go through definitely stages of it multiple times, and we'll keep on giving you this information on a daily basis through our emails and WhatsApp communications, but that's how this looks like. Three phases. First phase today, start building on the idea that you have currently. Second, MVP checkpoint is on Wednesday. You'll get forms to submit, and in way, you should submit it, what the format would be. Phase 3, a final shippable prototype, and by Sunday, a working application that sort of can be used by multiple people. If we change anything, If we change anything, it'll be actively communicated and adjusted for in the next 7 days itself. Okay? So that's how the next 7 days are going to look like. I'll open the chat and ask one question. Are we all clear? Type all clear in the chat.
+
+Om Asnani (23:09)
+I'll open the chart. Perfect. All clear in the chat. I'll take the questions also towards the end. All the doubts, all the doubts will come towards the end. I'll… I'll mention about code legs and credits and API. I know what questions you have.
+
+Om Asnani (23:24)
+But all clear so far, all clear so far. All clear so far. Got it, perfect, perfect. Perfect. Perfect. So, what we expect you to do… What we expect you to do is this.
+
+Om Asnani (23:44)
+Right? We don't want you to think a lot about idea. I received, if not tens, at least 50 to 70 messages on LinkedIn and email that, oh, can you please open the application for one more day?
+
+Om Asnani (23:58)
+I was thinking and sharpening the idea, but I couldn't submit. But we said, I'm sorry, we can't do it, right? We are not looking for perfection. We don't want a billion-dollar product coming in 7 days.
+
+Om Asnani (24:11)
+That would be… very different expectation. We don't want massive list of features. Okay, I built 1,000 agents in 7 days. or just… taking a lot of time in just the research point.
+
+Om Asnani (24:26)
+Right? We want fast execution. Right? What do you mean by fast execution? You have already picked out the problem. How can you solve that one problem? very nicely, in very detailed, and properly.
+
+Om Asnani (24:42)
+And how do you keep on experimenting? Experimenting with different features, different workflows to get to that solution faster? And how do you keep on shipping? How do you keep on shipping? What does that mean?
+
+Om Asnani (24:54)
+When you execute fast, when you learn fast, if your idea is going to work, not work, what changes you would want, How quickly are you able to ship? This will also be understood in your submissions.
+
+Om Asnani (25:07)
+When you submit on Friday, when you submit on Wednesday, we'll also ask you about the iterations. that you did, and understanding how exactly your mind thinks in terms of product thinking.
+
+Om Asnani (25:17)
+How do you build a product? How do you go from just building a very small workflow, a low-fidelity design, to high-fidelity design, to building a user journey, to making a MVP, to building a final product?
+
+Om Asnani (25:29)
+Right? So speed, along with useful wins. Useful that your customer, that your potential customer or user would actually like. How do you make things better, faster, or cheaper for your customer in any form or fashion?
+
+Om Asnani (25:45)
+That is going to be one of the major criteria for people who are going to win this, right? So, 5 lenses. This is what the judging criteria is going to be.
+
+Om Asnani (25:54)
+Right? For the final products all of you submit. First of all, technical execution. Does the project work? Is this technically credible? Does it have any bugs? Is it… can this product actually go live in production?
+
+Om Asnani (26:11)
+Right? Can this product be hacked in one go? Whatever, right, we'll give you much more specific ideas about going about that, right? That we have these sessions also. The first criteria, once again, would be technical execution. The second would be usefulness. Does it actually solve a real problem, a real workflow?
+
+Om Asnani (26:32)
+Right? Arjun spoke about a lot of workflows that they are focusing on, automation that they are focusing on. definitely that is one of the key idea. Whatever problem that you have fixed, that you have chosen, Are you able to actually solve it?
+
+Om Asnani (26:45)
+And how easily, how efficiently are you able to solve it, right? Third, creativity and originality. You know what? Let me tell you this. Out of all the 10,000 ideas that we received, If not less, about 700 people submitted that we want to build an AI job board.
+
+Om Asnani (27:06)
+something that helps people find jobs, you know, sort out their resumes properly. Definitely, we were looking for solutions like that also, but we are looking for something that is unique, which is not done before, something that is new in the AI-native era.
+
+Om Asnani (27:23)
+Right? We don't want… okay, humans do 10 steps, my agent can do same 10 steps faster. Great! But can you do it in 3 steps? What is the… what is the agentic UX? How exactly you think about agentic workflows?
+
+Om Asnani (27:36)
+is what the creativity and originality is going to be judged on. Is the idea, or implementation, the way of implementation distinctive. Fourth, codecs usage.
+
+Om Asnani (27:49)
+Did the builder meaningfully use Codex? Not just mention it. Now, a lot of you would have question, are we getting ChatGPT Pro? Are we getting Codex credits? Are we getting API from OpenAI? No, folks.
+
+Om Asnani (28:02)
+You're not getting any of these. You're not getting any of these. Right? What we expect from you is a bootstrapped founder mindset. Imagine you don't have any resources, you only have free APIs available from Open Router or any other tool that you may want to use.
+
+Om Asnani (28:17)
+Right? That's the stack that you'll be using. But also, whatever limits Codex and ChatGPT provides, how you are able to meaningfully integrate that in your ecosystem, it's what's going to be looked at also.
+
+Om Asnani (28:30)
+Right? Did the builder meaningfully use codecs, and not just mention, oh, we did this with codecs, great. But how meaningful part that was. So here, once again, your founder mindset is going to come in. That, oh, I… my problem had 10 steps to solve, steps 7 and 8 were the most meaningful, and that's where Codex Help me get through it.
+
+Om Asnani (28:52)
+So, we are going to look out for that also. And finally, finally, presentation clarity. What do you mean by presentation clarity is exactly when you do the demo, when you give us the recorded videos, you'll get the submission criterias as well. Basically, one, the final submission will have, you will be running us through your products, Why? While you will be actually, uh, let's say you are doing a demo to a user or an investor, give me one quick second, folks, sorry, tech problems, charger.
+
+Om Asnani (29:24)
+Uh, never happens. But yeah, perfect. So, this is the Thrive criterias that we are going to look for very actively. Right? Wow. I think… I think whenever we do, uh, certain interesting initiatives, uh, Lord Murphy always follows us. Murphy is Murphy's Law, whatever has to go wrong will go wrong.
+
+Om Asnani (29:48)
+Uh, so our Zoom had a limit, and now my laptop was about to die, but regardless of that, right? Regardless of that. Five lenses, five… And all of this, folks, this is 5 criterias. All of them will be given to you also after this call is done, so that you can optimize for all of it, right? You'll get a checklist that you can benchmark your product against and see what happens, right? It would not be like, oh, we are all… oh, we don't know what happened, how to select all of that. You'll be made completely clear. We'll try to keep as transparent as possible from our side in all terms and phases, right? So that's… about the final selection criteria, final, the top 5 winners who get selected, will be sort of marked on these bases. In the chat, are we all clear?
+
+Om Asnani (30:34)
+all clear in the chat. Perfect. Perfect. Perfect. Perfect. As I said, right, as I said, We want you to think like a founder, not just a solo builder, right?
+
+Om Asnani (31:03)
+One mindset basically talks about overbuilding, we already spoke about, you know, perfectionism, we spoke about that. How actually you think about one clear problem statement, which is your idea, only thing how you can change… you can modify your ideas slightly. You can't change it completely.
+
+Om Asnani (31:18)
+Right? If you said, let's say, for an example, I want to build a healthcare receptionist app. And now you want to change it to, oh, I want to build a healthcare admin app that also solves for XYZ features. If you want to go deeper into the same problem, you can do that.
+
+Om Asnani (31:36)
+If we want to change the problem completely, Unfortunately, that won't be considered in the final selections, right? 1. Narrow. You can go slightly more narrow, but still useful. I wanted to do 10 things.
+
+Om Asnani (31:50)
+But I'm choosing to do two, but doing… solving it very nicely. Right? I'm focusing on 2 out of 10 features that I wanted to build. And ship early. What do you mean by ship early? Whatever you want to test, whatever you think is the first sort of, you know, workable solution, ship that first, and then add the layers of it afterwards.
+
+Om Asnani (32:10)
+Right? Demo clearly, I think that instructions will come to you as well. We will sort of be, uh, you know, giving you that understanding. Along with collecting feedback, we not only want to do Okay, I built an MPP, I submit on Wednesday, great.
+
+Om Asnani (32:22)
+I built, uh, you know, a few more features, and I added till Friday, and submitted, great. No. At every step, on a daily basis, we want you to validate your ideas, We want you to validate your user journey, we want you to validate The final product that you build, collect a lot of feedback and iter That's what experimentation means, and that's what we'll be judging as well. And how you will do that, I'll come to that in one bit.
+
+Om Asnani (32:51)
+In one bit, in one very short bit. Right? Once again, the idea is not only to help you just ship a product, but also to validate your idea, and after the 7 days, you actually have something meaningful that could become, let's say, a 2K, 5K, 10K MRR business, right? And we'll push you towards that direction very actively.
+
+Om Asnani (33:09)
+There will be challenges, there will be constraints, but that's where a founder mindset gets tested, and that's why you are one of the top… one of the thousand people.
+
+Om Asnani (33:15)
+In the country who have been selected. So, if you don't believe, we do, that you can do it, and we will help you do that, right? What painful problem can I solve, is what you put it in ideas. It was one of the major It was one of the major ideas for us to accept your application. Now, think about these five things, right? Winning products, This is how they look like, right? If you want any criterias. First of all, are you making it cheap, uh, sort of, you know, time-wise, if you are saving time of anyone, how much?
+
+Om Asnani (33:47)
+Are you automating someone's work or someone's version? Are you reducing friction in the process? A task needs 15 steps? My agent, my workflow, is able to do it in 3.
+
+Om Asnani (33:57)
+Right? Increasing speed at the same time. And then quality, right? We'll… once again, all of the things that you are seeing, you will receive it after the call as a recording, and the deck will also be shared, along with specific ideas as well, and daily prompts to how do you think and make… keep on making better products.
+
+Om Asnani (34:15)
+on these criterias as well, right? But this is the mindset and how we want to think about, now, distribution, right? And how many of you, all of you, most of you who are regular founders, How many of you believe this? That 90% of products fail because of People have been able to make wonderful products, but only because they don't get right distribution, or they don't know how to solve for marketing, or sales, or whatever that distribution would be, or organic distribution, they don't work out.
+
+Om Asnani (34:47)
+Right? How many of you believe yes, no in the chat? Or you have been able to do something, but, uh, I had a great idea, a great product, but nobody used it. How many of you have had this problem before.
+
+Om Asnani (34:59)
+And do you want to change this in next 7 days? Do you want to actively work on changing this in the next 7 days? Let's change this in the chat, let's change this.
+
+Om Asnani (35:21)
+Alright, Martin. Now, a lot of you had a question, right? How do we actually help you build momentum in distribution? How do we help you? building that distribution, validating that idea. Now, we, as an outskill and OpenAI, have been able to solve one thing.
+
+Om Asnani (35:46)
+Wonderfully well. Wonderfully well. There are multiple companies in the globe, but only a few have been able to solve for distribution properly. And we are here to give you that arm from our side, give you that help and support from our side, right?
+
+Om Asnani (36:01)
+So, how does that happen? On a daily level, you will receive our prompts of what actually you should be doing if you don't have a direction, or what you have been doing, and we would expect, expect a daily progress from you. It can be a screenshot, It can be a paragraph, it can be a few action items.
+
+Om Asnani (36:21)
+Right? And you have to… it is not a compulsion, but if you want to actually solve for distribution, you'll have to build this in public. You'll have to do this hackathon in public.
+
+Om Asnani (36:36)
+So, we'll expect either a Twitter or a LinkedIn, or a Reddit momentum from you. What is that? Whatever you do it on a daily basis, we'll give you that idea of what exactly to frame, how to talk about, what exactly to include, and post that on Twitter, LinkedIn, or Reddit, whichever communities that you find helpful.
+
+Om Asnani (36:55)
+And share it with us on the daily check-in form that will come to you. And when it receives us, whichever ideas the progress notes we like the most, on a daily basis, we will keep on reposting that, commenting and liking, and make sure you get that distribution. Not only from our pool, but something that you create for your own idea. So, in the next 7 days, you not only have a product ready, you also have your first 100 followers, or your first 100 users, along with you, actually validating this idea. So, in 7 days, you actually know, oh my god, this problem is not going to… You know, the solution that I have is not going to work, or it's going to work, and I need to double down.
+
+Om Asnani (37:36)
+That's what it's going to be expected. Once again, it is not compulsory. It is only compulsory for people who actually want to build distribution along with shipping a live product in the next 7 days.
+
+Om Asnani (37:49)
+Right? And if you want to do that, we will enable that public feedback loop for you, and also the daily check-in journey, so you can be accountable on yourself building that as well, right?
+
+Om Asnani (38:03)
+all clear in the chat, all clear. How many of you are in for built-in public? Type built in public in the chat. Everyone will get an opportunity to share their links, connect with each other, and do all of that. The most important part is going to be you Committing to this journey, Shipping a product while, while building this as well.
+
+Om Asnani (38:28)
+While building distribution as well. That's what we are going to… enabled with you. Perfect, the chat is off now. Two checkpoints. As I already mentioned, I'm just clarifying it one more time.
+
+Om Asnani (38:47)
+Two checkpoints. First is Wednesday. We'll expect a product brief. You will receive how we want it and all the submission steps also, right? But I want to make sure that you are ready.
+
+Om Asnani (38:55)
+And you know what's expected out of you in the first phase, which is one pager, investor pitch. What is your idea? How exactly you are going to go about it? What is your user flow going to look like?
+
+Om Asnani (39:08)
+why you are the right person to solve it? Product brief, definitely, MVP screenshots, or a user flow diagram. By Friday, research and idea validation, we would have already posted a few posts, you would have received feedback, you would have gotten a lot of interesting feedback, and you would have iterated. So what does that research say?
+
+Om Asnani (39:24)
+Do you need to change a few things, any features that you change? What are the experiments that you did? What is the feedback that you received? What is the idea validation?
+
+Om Asnani (39:31)
+that you received with a working prototype link, and a demo walkthrough video. Along with that will be our final public launch post also. Right? Which you will submit by the end of Sunday.
+
+Om Asnani (39:46)
+Which you will submit by the end of Sunday. Deadlines will not change. Sunday, end of the day. Sunday, 10 to 12 p.m. 12pm is when, whenever the clock hits Monday, the deadline is ended. Unfortunately, we won't be able to change it. There are a lot of people who already wanted to apply, we weren't able to open it. Same will happen here.
+
+Om Asnani (40:08)
+And we actually believe you will be able to ship this, right? And you are not building alone. You are not building alone. If you think you are building alone, no.
+
+Om Asnani (40:18)
+Definitely, there'll be 1000 people who are here with us, who are actively building solo products, but we will make sure that is our responsibility. That is why you have, you know, Outskilled and OpenAI together working on this, so that you can find your own peers, If, at the end of 7 days, even if, let's say, in the journey you feel, uh, maybe this is not something I want to continue, but we are able to pair you up with someone who you may be able to work with after the 7 days, You'll actively get mentoring in these two days when the phases are. You'll get that mentor support through sessions, and a lot of the questions that will come in as well.
+
+Om Asnani (40:52)
+You will not only build, but learn in public also, through a lot of feedback that we will enable for you. to our ecosystems, right? And also pushing into startup ecosystem. A lot of first-time founders, a lost-time… a lot of first-time builders, or people who already have a job. How do you break out and become a founder? How do you get into the startup ecosystem?
+
+Om Asnani (41:16)
+That is what we want you to actually do in the 7 days, right? You don't have to worry about any of these, that is our responsibility. all the things that you'd see on this slide is what is our responsibility. You are the builder, and everything around is structured around you.
+
+Om Asnani (41:33)
+for the next 7 days, and that's what our responsibility is going to be, right? So, it is your job to build, and our job to enable you to get that distribution, to get that peers, to get that team, to get opportunity to get out and start building something of your own.
+
+Om Asnani (41:47)
+Right? As I said, as I said, right? WhatsApp community is always open. Uh, while you may not be able to type in right now, in a few days, we will open a WhatsApp group as well, so that you can interact with each other. A daily check-in will happen in, uh, every morning you get a prompt.
+
+Om Asnani (42:08)
+And then, whatever is required, you'll be sort of expected to submit, or, you know, sort of update your progress by the end of the day. And a networking and support ecosystem. We'll also do these collaborative networking… networking… Meetups, and keep on sharing your active opportunities where you can push in your product and launch it as well.
+
+Om Asnani (42:27)
+Right? That's what we are going to do, and two sessions, as I said, unblocking hours. Wednesday at 7pm, and Friday 7pm, and that's exactly when we will have this live sessions again, right? And, uh, that's exactly what we wanted to share in very brief of the detail, right?
+
+Om Asnani (42:43)
+Once again, these are the same things in terms of how you actually, you know, play fair and build real. We are going to make sure, uh, and folks, one more understanding, right?
+
+Om Asnani (42:53)
+We will be accepting all the new products which have been built in this 7 days, not something that you have already built before today, right? That is not something that we are focusing on. We are focusing on something that we have actually built in the next 7 days. So, build during hackathon, policy number one.
+
+Om Asnani (43:09)
+Policy 2, responsible AI usage, uh, you know, and, you know, I'll tell you how we'll, you know, validate as well. We can't share everything live with you also here, but we'll check how are you looking at the AI usage, what are the sort of models have you been using? How have you been able to, uh, correct it, right? Any plagiarized content, any sort of illegal use of any picture, photo, code, whatever, whatever that is, won't be appreciated. Originality, I already mentioned your idea, your code, and are helping you worship that muscle.
+
+Om Asnani (43:43)
+And at the same time, no fake demos. If it's a mock, you can say that. You can be as honest as… possible with us. Our job is to make you win. And we can only do that if you are honest with us.
+
+Om Asnani (43:56)
+Right? And if you trust If you put that trust in us, we'll make sure that you win in the next 7 days, and also after that, if that sort of, you know, for very few of people who we believe actually is possible also.
+
+Om Asnani (44:09)
+Right? If you are genuinely dedicated on solving the problem that you selected, if you have forgotten your idea, some of you mentioned, you will send it back to you on your email once again.
+
+Om Asnani (44:17)
+Right? So that you know what you have signed up for. Hmm, so that's basically how we are going to, you know, keep some sanity check over the next 7 days, and once again, I want to emphasize on momentum.
+
+Om Asnani (44:31)
+over perfection, on a daily basis, the one question that will come to you is, what did you get done today? How much thinking did you take? No. How much conversation did you did? No. What did you get done? How much experimentation did you get done? How many times you broke your head into building that one feature?
+
+Om Asnani (44:53)
+or that workflow. So build that real thing, make product that is useful, do a lot of research around that also if, uh, you know, you still need that help and muscle, and I traced first.
+
+Om Asnani (45:04)
+They're actually, actually going to look at a lot of experimentation, the changing in iteration that you're going to do in the final demo as well. That's what will also contribute to you winning or making it to the top 5.
+
+Om Asnani (45:14)
+Right? Now, this, today, is your time. This today is your time. You have to build. It's all on you, and it's support of Outscale ecosystem and OpenAI's ecosystem to get… this might be your first AI product, Right? But we'll make sure in the next 7 days, you are able to ship that and do a great job there while we help you to look at and get your first customers or first users, and at the same time, how do we Open your brain to how do you be actively involved in the startup ecosystem, or if it's just a portfolio project for you, how do you properly add that and pitch it to the next, let's say, you know, job that you would want to get, or whatever that is, and how do you use this particular 7 days to make it an inflection point in your career. We're going to give you a lot of ideas of how to do around a lot of your goals are as well, right? Building is one thing that you need to focus on, and that's the whole core job of a builder, of a founder. Everything which comes along the way, is what we are going to help you, support you, and guide you with, right? So that's how this is going to look like. All clear in the chat, all clear in the chat. Are you all following with me? Are you all understanding how we are going to do this?
+
+Om Asnani (46:26)
+Do you all feel this is going to be okay? Now, I feel slightly more calmed down. Vepo, I'll answer your question, give me 2 minutes, please. Do you all understood?
+
+Om Asnani (46:41)
+that how actually we are going to con Hawaii. I did the CASCAM Hawaii. What's the problem? What if we have forgotten our idea? We'll come to that. I'll tell you. We'll send that to you.
+
+Om Asnani (46:58)
+back. Okay. No credits even from OpenAI. Yeah, there are no credits from OpenAI. There are no credits from Outskill also. When we started outskill, nobody gave, nobody handed out credits to us. When OpenAI started, nobody handed free credits to them.
+
+Om Asnani (47:21)
+Right? What we actually want you to do, folks, once again, we want you to think like a bootstrap founder. There are already a lot of free resources available.
+
+Om Asnani (47:31)
+This is not in any other hackathon to just win some grants. We are not going to do that. Unfortunately, I'm very sorry if that is what you were expecting, right? This is not a hackathon, where you ship a product and get a grant.
+
+Om Asnani (47:43)
+or get a certificate. We're actually focusing on builders, who want to pitch real projects and use our help in building that distribution and becoming something great in the startup ecosystem.
+
+Om Asnani (47:56)
+Right? That's what we expect. Right? And that's how it's going to operate. You'll get a lot of support, definitely, right? From, as I said, from all the different teams, right? So, what we do now For the next 10 minutes, I'm going to open this up for questions. We are exactly at 7. Wow, it's 4 minutes left.
+
+Om Asnani (48:18)
+Yeah. First, we'll open our… open it up for questions, then I'll also tell you What are the next steps from here, right? A lot of you would have already received reflections link in the email.
+
+Om Asnani (48:28)
+I'll talk about that also very quickly, right? But while I do that, while I do that, give me one second… give me one second, folks. Perfect, perfect. So what I'm going to do now is open the chat box for 10 seconds, keep your questions ready, keep your questions ready and type in, and we are going to take a few questions, and then we'll, uh… I'll drive you through the next steps, and then we'll close out for the day in next, uh, 20-25 minutes. Anita are more questions, we stay back here for some time, okay?
+
+Om Asnani (49:10)
+There's a Google Form the team has shared. Make sure you fill in that form, and uh… I'll make sure to pick in questions from there quickly, and make sure most of we are able to answer without spamming the chat, or dropping any links apart from us. And if we have time, I would like to keep 10 minutes also, so that we can have this networking activity also, so that you can also speak and meet with each other.
+
+Om Asnani (49:38)
+Got it? Give me one second, I'm just opening up the form. But folks, how does this sound till now? In the… do you have still permission to react? I think, yeah, you have.
+
+Om Asnani (50:03)
+Oh yeah, perfect. give me one second, the form is just opening up. Perfect. I can see a couple of questions. I'll just start answering them in a bit. Interesting, interesting.
+
+Om Asnani (50:44)
+Perfect. So, let me answer a few common questions that are coming in, right? Once, so that we are done with them, if that was your question. The first question.
+
+Om Asnani (50:56)
+What if I have forgotten my idea? How many of you have this question? I forgot. It's been 5 days, I forgot my idea. So, what is going to happen is… After this call, my team is going to send you an email with your idea that you have submitted, your full application form that you submitted. You will receive that, so you exactly know what you are going to build.
+
+Om Asnani (51:16)
+Right? Now, in case if there's a change in idea, in case if there's a change in idea, I told you two things, right? One is, you can go deeper into the same problem statement, you can't change completely.
+
+Om Asnani (51:29)
+So, you will also… tomorrow, when you receive the first check-in, First, check-in, any adjustments, if you want to make to the idea? We'll give you that option to do that.
+
+Om Asnani (51:37)
+Right? That's true. Now, next one. Now, it's a good question. It's a good question, it's coming from Sahil. For the demo video, can we use an AI voiceover and edit our video? You can. Use your creativity. You are open to do it.
+
+Om Asnani (51:57)
+completely open. Uh… My project is… As it will usually take 3 to 5 days, so I thought of another project. Folks, This is a good question, let me answer that also. My project is building Dash, but it won't be possible to make it live, as Chrome or App Store, or another one usually takes 3-5 business days of launching it live. We don't expect you to launch it on any app stores in 7 days. What we want is some app that you can demo and show us, right?
+
+Om Asnani (52:26)
+Let's say if I want to build a mobile app, right, it definitely will… or Apple will take about months to, you know, review that and get it. We don't want that. Do you have an APK file that you can run us through on the demo? That's great. Can you run it on local and drive us through? Great. That works.
+
+Om Asnani (52:42)
+That works. If a person… If a person has, uh… If a person has pro subscription already, and another person does not, how will that be monitored? One second… Interesting. What happened? I think there was some setting problem, but no worries. I will, uh, make sure that happened.
+
+Om Asnani (53:09)
+So, a lot of you would have some unfair advantages. Right? A lot of you would be first-time builders, you may not know how to build a product. But you may come from some expertise. We have, let me tell you this.
+
+Om Asnani (53:20)
+We have people who are 17-year-olds, And we have people who are 55 years of old in this hackathon. Everybody has their own leverages, right? Somebody will already have a Codexpro account, Somebody would already have cloud accounts, somebody would already have another account, that's their advantage.
+
+Om Asnani (53:38)
+You can choose to use what you want, but also have Codex integrated in your workflow. Uh, what you can also do, in case, if that's, uh, we'll see if our team can enable that. If some of you already have a few accounts and you would like to open up for people and use together, we'll see if we can, uh, open up.
+
+Om Asnani (53:57)
+Now, this is one question that is coming from Ish, uh, Priyansh, and I think a lot of you would have that, so I'll… anyways, take it very honestly and answer that, right? Uh, so, isn't it unfair competition? Someone who already has a $200 Codex plan will have a massive unfair advantage over anyone else? Yes.
+
+Om Asnani (54:15)
+Yes, it would be, it would be. Why not? Why not? And they have worked hard to earn that $200 to get a subscription. That's why they have that expertise, right?
+
+Om Asnani (54:26)
+Now, someone who's, let's say, 20, 25 year old, how many people I'll tell you the problem statement. People who are at 45, 50 years old, sometimes they struggle with new ideas, fresh perspectives that you guys don't have.
+
+Om Asnani (54:40)
+And they spend a lot of time working with all of you to do that. Right? So, do you not have your own unfair advantage? You do have. Right? As I said, this is not any other hackathon, where you can come in, build a product, and earn grants, and do nothing about it. We actually want to focus on people who want to ship real products and back them, right? That's where all the efforts of OpenAI and Outskill go. Where to find a problem statement? We'll give that to you. I want to change the idea, I already answered that. We need to make some product that we gave ideas, okay?
+
+Om Asnani (55:11)
+How is equality justified? Some users will have, folks, that's fine. Everybody has their own thing. I live in Bangalore, I have better access to startup ecosystem, somebody does not. Can we change anything about it? We can't.
+
+Om Asnani (55:23)
+Right? Uh, got it, and I think, uh… Can we use local LLM, such as Ollama? You can. What needs to be submitted, like a document, we'll share you exact step-by-step process, uh, as the phases come.
+
+Om Asnani (55:40)
+Do we need to pay any amount for this hackathon? No, you do not. Is there a size limit to the video submission? No. You can submit a video link instead? Yes, you can. Build in public and support from team for a project, how will that be distributed and conducted? Also, timelines while a PBT? Yeah, we'll share that, all of that with you, specifically as well. And on a daily basis, we'll keep collecting questions, so when we come to Wednesday, we already know the questions and where you are.
+
+Om Asnani (56:07)
+Uh, is it strictly individual, or can we team up, too? If we have the same idea and both of us got approved? Uh, it is fine if you do that, uh, but only when you know each other. We won't be building teams for you.
+
+Om Asnani (56:19)
+Does it need to be open source? Not a requirement. It can be, it can be not. Do we have to build products from scratch, or… no. Build something that you are building during this hackathon.
+
+Om Asnani (56:36)
+How will you track usage? We will, in the sort of criterias that we give it to you, we'll have that understanding of it, right? What if the idea, the app that you're building requires us to build the app? As I said, We want to see a demo of it, not a… I don't want to go and playstore and download your apps, it's basically… we don't want to publish you. Wherever the process takes time, which is not in your control, that's fine.
+
+Om Asnani (57:02)
+We don't want you to once again publish on App Store or Amazon, or whichever store. It takes 7 days it's just not 7 days. It actually takes months to actually get approved also. But you want to see something that you build, and you can share the link of that in a drive as an APK that we can download and check and use.
+
+Om Asnani (57:21)
+If you choose not to do the distribution part, will that affect our marketing negatively? No. No, if you do not participate or want to do building public activity or daily check-ins, that's completely fine. It's… it will not impact in any of your submissions, any of your final scoring.
+
+Om Asnani (57:37)
+Right? But if you want to use the muscle that we have built and are leveraged to get you, you can do that. But if you do not do it, it does not impact your final rating.
+
+Om Asnani (57:49)
+can be used any IDE? Yes, you can. What is the prize of the winner? Oh, did we not share it? Yeah. Folks, everybody, all the submissions that happen until Sunday, the results will be coming out on Tuesday or Wednesday, right? Let me share the dates also.
+
+Om Asnani (58:06)
+So today, we are exactly at 25th May. The hackathon will end on 31st May Sunday. The final results will come in at… on 2nd June or 3rd June. Right? And five, top 5 builders will be selected, who will receive codecs Pro account for one full year individually, 5 individual accounts will be given out to people who actually go out and, uh, are there any other bonuses? Uh, let's see, Kardak, how about… Yeah, we'll share it as we go deeper.
+
+Om Asnani (58:37)
+But, as I said, we want to actually back people who actually want to build meaningful products and take that journey, right? Is it possible to have a pitch for my other products as well, which I shipped? No, that won't be considered.
+
+Om Asnani (58:53)
+Uh… is it okay to use other coding tools? It is okay to use that. Why can we not change the idea? There can be a case where we might have found a different domain or a gap. That's completely fine. If you can… if you want to change the idea completely from what you selected, it won't, sort of, you know, that was one of the important part of you getting selected. Uh, the submission might get, uh, the final selection might get impacted. But also, at the same time, uh, you will get the ideas that you have put out in the form, again, in the emails that we shared with you.
+
+Om Asnani (59:23)
+Uh, and I have… yeah. Can we build a solution as a containerized web app? You can. for a product where it is not revenue-based product, what other areas for selection? Uh, folks, once again, revenue, or any distribution, is not a part of the final selection. Final selection only depends on the 5 criteria that I shared, right? Uh, and that does not involve that you will have to have 100 users, or you will need to generate money from it.
+
+Om Asnani (59:54)
+A final working app, or a prototype, or a product, or that automation is what is going to be considered. The tech stack is the goal here. Community idea question, can you make a Discord, if it's possible?
+
+Om Asnani (01:00:09)
+Uh, participated in, uh, no, we'll right now, for 1-2 days, we'll keep it to WhatsApp, and after that, we'll sort of, uh, you know, get to it. Can we get all things said in a meeting as document? Because I'm attending while traveling to some urgency? Yes, you will get that.
+
+Om Asnani (01:00:24)
+If the idea our product is a B2B, is it okay? Like, it is fine, yes, it is fine. B2B, B2C, B2, B2C, everything is fine. If your idea is selected, if you are here, idea that you have thought of is already in, so you can go ahead on top and build on top of that.
+
+Om Asnani (01:00:40)
+a lot of ideas… a lot of questions are around that. Can we get a copy? You will get… Will whatever we build, we'll have full control and copyrights. Everything is yours. We don't own anything.
+
+Om Asnani (01:00:50)
+Any idea that you build, anything that you ship, anything that you share on the forms, everything with us, outskill and OpenAI controls nothing. It is your product.
+
+Om Asnani (01:01:00)
+It is owned by you completely. And definitely, if you are following the rules of whatever platforms that you have been using, but we don So if I think, like, a bootstrap founder, can I use any LLM, or are we **** ** with codecs? You can use everything, but also integrate codecs in the building journey.
+
+Om Asnani (01:01:19)
+As a student, how can I build full application without, uh, will you help me? We'll keep on sharing daily updates on… if you are first-time builders, like a lot of you are, on a daily basis, we'll keep on sharing ideas of how you should think, how you should build, so it's easier for you to do that. We'll also share you examples of what people have been building inside community, so that you keep on consistently getting that advice also.
+
+Om Asnani (01:01:44)
+As a first-time builder, how to kickstart to build one such large-scale, what are the key indicators one must keep in mind? Uh, there is nothing large-scale that we need to eye for 7 days. Who's this? Uh, this is Siddhi Agarwal. Siddhi, there's nothing large-scale. We don't want an Amazon to be built in 7 days. What we want is If, let's say, an idea off like that, can you build a simple app which… where you can list List a book, list a product, and people can buy, right? A first MVP. That is workable and shippable, and can be used by people.
+
+Om Asnani (01:02:16)
+I want to implement a much better idea, having better ROI and potential. Is that possible? Google is provisioning, uh, okay, any reasons? No reasons. Uh, if, basically, you want to integrate multiple stacks, you can do that, feel free to do that.
+
+Om Asnani (01:02:31)
+I have not received your email with reflection link, uh… We will… I'll just take you through one more time. My product's copyright issues, I think I covered that, it remains yours.
+
+Om Asnani (01:02:42)
+I need, like, a good validation of my idea, uh, of is it really good and scalable in future? Because giving without cause is not viable, so need help in that particular area, exactly why I built-in public method is designed.
+
+Om Asnani (01:02:55)
+Uh, how will you help us with actual distribution of our products release? Please, the hackathon is great, by the way. Uh, how will we help? As and when you keep on sharing your daily progress notes, you will see that coming through. We'll also share it within our own communities, in our own, uh, you know, user bases, and the sources as well.
+
+Om Asnani (01:03:12)
+These are all the common questions that I am seeing. Uh, there are about, uh, exactly 300 questions, to be really honest, and all of them, as I was skimming through, all of them talk about exact same thing.
+
+Om Asnani (01:03:26)
+Right? Which is about these couple of challenges and things, right? What I'm going to now do is, one, in the chat, in the chat, are we all clear? Anything that I have not covered, you can drop it in the chat now for next 10 seconds, and then I'll run you through the reflections post, and then we should have time for a quick breakout activity.
+
+Om Asnani (01:03:45)
+In the chat, opening it now. Got it, turning the chat off now. Jerome. Jerome, what if we have forgotten our idea? Can we get access to see? Jerome, I mentioned, yes, you will get access. How you will get access, our team will send you your idea that is shortlisted on your email after this call ends.
+
+Om Asnani (01:04:12)
+If I get selected into top 5, will we get help after it promoting it by mentor Mohit? Uh, you might get it, and we will share it as we reach all the milestones, right?
+
+Om Asnani (01:04:24)
+Will the winners get, uh… PPO in OpenAI? No. Can't promise. Uh, okay, one second. if I… okay, what if I already started building that product? If you have started building Sunday, it's completely fine, but not something that's already created before that. Can I show dummy user on my app? You can.
+
+Om Asnani (01:04:50)
+But once again, users and all of that are not the major criteria. While we will do help you, you're getting that direction. Can you reshare the links? Yeah, my Q&A is not addressed. Vamsi, uh, better we would have put the question itself. I'll open the general one more time once again. Uh, my idea does not include any agents or any AI features in the application. Will this be okay? It is fine. It is fine.
+
+Om Asnani (01:05:10)
+Folks, we want a product, an automation to come in. It may not be AI-first product or AI-first thing. While it is built with AI, right? Built with AI is major focus, uh, then, uh, requesting the recording, you will get it. Share the PPD, we will share it.
+
+Om Asnani (01:05:27)
+My idea, okay, can we build a dev tool? You can build a dev tool. Can we network with web of an open AI team after even the hackathon? I'll tell you as we reach, uh, you know, the age milestone. Folks, there are surprises also coming in. I can't tell literally everything on the first call, right? Let's focus on building, and we will make sure what you'll get and whatnot as we get deeper into it.
+
+Om Asnani (01:05:49)
+Can we do an offline meetup? I don't know, we may. Varami may not. Ah, got it. Perfect. Uh, one second… There was someone who said my question was not answered. I'm trying to find, but we have so much, so we'll keep it to that.
+
+Om Asnani (01:06:10)
+Understood. Please answer this. It's a genuine question. I have my idea, and maybe we built as a website, so the product that I'll be building is under that, and not exactly in that website, so can I do this? But I will be using that website for the users to understand about my product. Uh, Shubham, we will recommend you to build a new product, uh, you know, if it's already on a website, that's fine, but whatever you're building new, You can share that as a demo, okay?
+
+Om Asnani (01:06:33)
+Perfect. Perfect. So folks, what happened is… What happened is, when we shared you the link, when we sort of gave you the, uh, acceptance, we also shared a reflection post, right? What is a reflection post?
+
+Om Asnani (01:06:48)
+I'll show you as well, this product also is built with AI itself, so I'll quickly run you through. And I'll also share the link in the chat very quickly, and uh… Yeah. So, I'm dropping the link in the chat.
+
+Om Asnani (01:07:12)
+So, what is this? So, what we have done, for every session for every check-in, for every phase. This is how we are going to move forward. One second. Now, this is something that we shared with all of you. I spoke about the built-in public concept. This is how we start the hagathon, right? Everybody who's on call with me, who can go on the link, and you can, first of all, add your image.
+
+Om Asnani (01:07:42)
+If you have it handy, I'll show you how… sort of this works out. I've added my image, my name, which is your name, What is your product or idea, or a problem statement? At this point in time, if you do not remember, you can talk about what are you excited in building, what are you excited in terms of what excites you in joining and building through these hackathons.
+
+Om Asnani (01:08:08)
+Right? Let's say, uh… one second… I'm excited. to help 1,000 builders. launch, build and launch. their products. And next 7 days, okay? Okay, now, profession, who am I? I'm a student. I… what is my designation? Whatever that is.
+
+Om Asnani (01:08:38)
+If you're a student, you can type in student, or whatever your designation would be, head of community and JTM. What's your company? If you are in a college or an institute, type your name of com- name or institute. Once you click on generate, post an image, You will see a post getting generated, along with an image that will come in.
+
+Om Asnani (01:08:57)
+Along with an image that will come in. Excited to share that I have been shortlisted for the OpenAI Outskill AI Builders Hackathon. Over the next week, I'll be building alongside 1,000 selected builders from across the country to launch real products using codecs by OpenAI.
+
+Om Asnani (01:09:12)
+We'll also get access… this is basically what the post… generates, and this is the picture that gets generated. You can do two things. You can either directly click on post on LinkedIn, Or, you can copy text and download the image and go to X.
+
+Om Asnani (01:09:30)
+Or, you can sort of, you know, come to, uh… come to LinkedIn, drop this, And copy and paste the post that came in, and click on post. Click on Post. After today, you will also get, let's say, let me actually do that.
+
+Om Asnani (01:09:50)
+After today, what you will also receive is a form. Whoever has made this post already, uh, you will have to sort of just give us the link so that we can sort of amplify this post for you. This is how it will look like. When you click here, copy the link to post, this is what you'll… sort of submit, or you can go to Twitter, You can, once again, copy the image and talk about what are you excited.
+
+Om Asnani (01:10:15)
+about, let's say, at this point of time, I'll mention this one. It's two things. Right? And I'll mention Odix, outskill, uh, and yeah, if you want to add any other one, and you can click on post.
+
+Om Asnani (01:10:29)
+You also see something on my… Twitter, right? Build in public. We are going to create a few smaller communities so that you can actively connect with each other, share it with each other, and share it with an ecosystem that actually promotes building products where people actually keep on building. A lot of you would already be familiar with a lot of these activities, but we'll share you how do you build… you focus on building the idea, we'll focus on how do you build the distribution and helping you support with that and giving you steps and doing that, right? So that's basically how we look at doing this with you. And, uh, that's basically what this link will do that for you. At every phase, you will receive a similar infrastructure, similar page, or similar one. At this point of time, everybody who is starting and who is committing for this journey Make sure you do that. It is not compulsory, once again. It is not compulsory. It is for you to build that momentum for you and getting started with it, so that daily, when you keep on posting about what you're building, your audience knows what you're building, and people, when we promote your post, when people come to you, they exactly see that journey that you have been building, and you can see that. Just doing this, we have been, in the last 5 years, I've been able to train almost 15 million learners, and about people have not only built their own distribution, but also built following along with it, and we see this model working for everyone who sort of actually you know, wants to become a builder. One of the major problems, you can build a wonderful product, but if you can crack distribution, that's when you become a wonderful founder, also, right? But regardless of that, don't worry about any of that. Right now, your focus is on building and building only. Now, in the chat, In the chat, in the chat, do you want to do a quick breakout activity? Exactly… Exactly 10 minutes.
+
+Om Asnani (01:12:13)
+I'll open the chat now. First, answer me one. Are we all clear, and are we all ready in the chat? Are we all ready in the chat? Are we all ready in the chat?
+
+Om Asnani (01:12:30)
+Why is it called Cortex if the hackathon does not provide codex access and participant? It is also called OpenAI and Outskilled Hackathon. Right? Because you get support from these both teams to actually do this.
+
+Om Asnani (01:12:41)
+Right? But okay, uh, perfect. Are we all ready? Folks, please, no links in the chat. We will give you enough time to network with each other. Thinka, Amarot Kumar, we'll give you time. We'll give you time, we'll give you time to promote your GitHub, we'll give you time, Kunal, we'll give you time, uh, Vivek, uh… And everyone who's doing this, please, please, right, please.
+
+Om Asnani (01:13:15)
+Don't tell me that you guys didn't give clarity, right? Let's… let's all work together as a team to help each other out, right? In the chat, are we all clear and ready?
+
+Om Asnani (01:13:28)
+And if you see someone spamming, can we please remove them, at least for today? Yeah.
+
+Om Asnani (01:13:51)
+Rahul, you will get the answers as we go deeper. Right now, the focus is on building and not funding. Have you built it already? No. 7 Days Hackathon is for builders. If you're already a builder, this is not for you.
+
+Om Asnani (01:14:04)
+Please do not spam. It is not helpful, it is not professional, and it would not be appreciated, right? Please, folks, I'm trying to be as helpful as possible. Let's help people who actually want to build and do that, right? If you have been selected, we see some evaluation and helping that from you, okay?
+
+Om Asnani (01:14:24)
+Perfect. Do you want to… do you want to do… do you want to do a breakout activity quickly? Perfect. I think we'll go slightly above if we do that, so I'll just take final… few questions which are coming in, and then we'll close out for the day. Can we use GitHub? Harsha, thank you for 50 times. Can we use GitHub and use Netlify to deploy and give a link to access? You can do that. You can do that. Uh, is no codecs an eliminator? Uh, yes, it is.
+
+Om Asnani (01:15:05)
+How do we access technical help if we get stuck? Dhruv, uh, you will receive the Q&A forms every day, and we'll help you with the resources to do that as well. Also, the calls will happen along with that. How do I access the Outskilled LinkedIn tool? Richard will share the link one more time in the chat, and also on the email once this call is done. Can we exchange the Corex subscription for laptop or something? Uh, as a community, if you want to do that, we'll see how we can make that available, but for now, No. My MVP will have the feature I give in my idea, but also many more features as I want to go deeper. You can do that, Tande. Uh, will top five participants get, uh, yeah.
+
+Om Asnani (01:15:39)
+Uh, will Samarjan and Lajay? No, Abhijit. Uh… I can't promise that. Can I use my premium? You can. Uh… Okay? Gotcha. I think there were a few people who want… Please answer, will you help the winner to launch the selected product at scale? Apurva, we cannot promise that.
+
+Om Asnani (01:16:01)
+This is a hackathon to ship out a product. What happens after that will come in at the end of it, not right. Right? For the next 7 days, the focus is on building and building only.
+
+Om Asnani (01:16:15)
+Perfect! I think we have reactions on. Folks, all ready, all clear, all excited? All excited? Can we take a quick picture? If we all can turn our cameras on, If we all can turn our cameras on, would like to take a quick picture.
+
+Om Asnani (01:16:33)
+Uh, and announce it to the world on, uh… Perfect. Perfect, perfect. I have… I'll just… One second, folks. I'll hide non-vide Perfect, perfect. Perfect! Can we… can we all do a thumbs up?
+
+Om Asnani (01:16:55)
+Can we all do a thumbs up? Yeah? Let's do that. Well, you can also react on that, along with that. I'm seeing a lot of familiar faces also. I'm seeing a lot of familiar faces also.
+
+Om Asnani (01:17:11)
+Got it. Got it. Perfect, perfect. Wonderful, I think I got it. I think I got it. I think I got it. It's wonderful to see, uh… I'll take a couple of names whom I have seen in a couple of chats. I have seen Saurabh, uh, before, Saurabh Bhomic. I've seen, uh, Preetamji, uh, who's here, uh, you know, a couple of times. Preetam Sirulji, uh, Sayed Hassan is here, uh, long-time standing. Uh, Kartik Kareh, who's just here, so he's also on camera, um… I have Nitin Vedant… Uh… I don't know if I know Anuja, I think I've seen in some session.
+
+Om Asnani (01:17:50)
+But yeah, uh, there are a lot of people without camera also. Apurva Pandey, I think, one I see. Uh, there are a lot of people. folks, how many of you have seen me in any sessions before this?
+
+Om Asnani (01:18:04)
+what do you call this? Yeah. Got it. Abhijit, yeah, we… this is the first time, thank you. Got it. Kate has also not seen me. Tika, Tika. appreciate. First of all, gratitude. Thank you so much for all for joining this call, and also joining this hackathon. I personally, I personally will make sure that you all get a wonderful experience in the next 7 days, and you actually achieve the outcomes that you have signed up for, right? Uh, and everybody who has, you know, seen me before can vouch for that, at least I can say that. In the chat, can we confirm that I would be able to do that?
+
+Om Asnani (01:18:41)
+everybody who has sued me before. I'll open the chat for those people. Yeah, for everybody else, for everybody else, you have come in from, uh, WebUvs, Instagram, right? WebUv's YouTube channel. How many have come from, uh, Staying Ahead community?
+
+Om Asnani (01:18:57)
+You follow web of Sisinthi, and you saw this reel, and you came in. I… or on LinkedIn, or you saw ChatGPT India, or you saw… Right? Where all… did you come in?
+
+Om Asnani (01:19:10)
+Nice! Perfect! Perfect. Kapil, I already answered that. Please do not spam. The recording will come to you, you can see that one more time, if that's the case.
+
+Om Asnani (01:19:21)
+PPG will also be shared, folks. Shashpada, I'll answer that question already. I'll share the recording. Got it. With that… with that Thank you so much all for joining in. Uh, appreciate all of your support, all of your excitement. I think it makes me also excited, along with a lot of them. So, I accountable on, uh… LinkedIn and other platforms to show you what we have been able to achieve. And a lot of you that will get in, right? I hope we see wonderful products getting shipped. We'll give you as much support as we can. We'll make sure that you don't get stuck around into a lot of technical details, uh, and where you can access a lot of free credits, how you can sort of go around building that, how you can Use that Bootstrap founder mindset and get still get things done in the next 7 days, and I hope to see a lot of people getting success at a global stage, and that's what we want to prepare you for.
+
+Om Asnani (01:20:17)
+With that, with that, this is Om Asani signing off for the day, uh, for AI Builders Hackathon. We have kicked off the first phase, uh, and we hope to see a lot of interesting ideas getting built. Your ideas. Once again, you will receive it on emails, uh, you know, after this call is done, along with the recording of this, so that you can refer, and the deck That will come to you as well, right? Uh, for everybody who's seeing me, I'll see you once again in couple of days, and on WhatsApp, right? Thank you so much for joining in. Thank you so much, can do a quick wave of the hands. Can we do that?
+
+Om Asnani (01:20:50)
+Perfect! Thank you so much, folks. We'll see you very soon, right? Bye.

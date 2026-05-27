@@ -1,0 +1,102 @@
+This comprehensive Product Requirement Document (PRD) is structured as a technical specification for an AI coding agent to develop a fully functional **Mol-Bhav AI Negotiation Engine**. It follows a phased implementation strategy optimized for frontier LLMs to maintain high performance and consistency.
+
+---
+
+# PRD: Mol-Bhav AI (The Algorithmic Bazaar)
+
+## 1. Project Objective & Strategic Context
+
+**Objective:** Develop an autonomous, voice-native negotiation agent for the Indian e-commerce market that utilizes Game Theory and Large Language Models (LLMs) to conduct bilateral price bargaining within the **ONDC (Open Network for Digital Commerce)** framework.
+
+**Strategic Moat:** Unlike static "buy now" models, Mol-Bhav AI restores "Transaction Utility"—the psychological win of the deal—which is a core driver of Indian consumer behavior. By unbundling the transaction via the Beckn protocol, we enable a decentralized "Machine-to-Machine" economy where buyer and seller agents discover value in real-time.
+
+---
+
+## 2. Technical Stack Specifications
+
+* **Negotiation Framework:** **NegMAS** (Negotiation Multi-Agent System) for Python.
+* **Negotiation Protocol:** **Stacked Alternating Offers Protocol (SAOP)**.
+* **Intelligence Core:** LLM (Llama-3-70B or GPT-4o) with **Chain-of-Thought (CoT)** reasoning.
+* **Network Protocol:** **Beckn v1.2.0** (standardized e-commerce APIs).
+* **Voice Layer:** **Sarvam AI Saaras** (for low-latency Hinglish ASR/TTS).
+* **Database:** MongoDB for transaction logs and state persistence.
+
+---
+
+## 3. Phase 1: Core Negotiation Logic (The "Engine")
+
+*Developer Instruction: Use the NegMAS library to implement the core mathematical model.*
+
+### 3.1 Mathematical Framework
+
+* **Outcome Space ($\Omega$):** Define a finite set of possible offers $\omega \in \Omega$ representing the issue "Price".
+* **Reservation Value ($r$):** The minimum utility a seller accepts ($R_s$) or the maximum a buyer pays ($R_b$). If $R_s > R_b$, the ZOPA is null and the agent must walk away.
+* **Concession Strategy:** Implement **Time-Dependent Concession** where utility decays as the deadline approaches ($T_{max} = 10$ turns).
+
+### 3.2 Strategy Archetypes
+
+Implement a **Tit-for-Tat (TFT)** negotiator that mirrors the opponent's concessions to maintain fairness.
+
+* **Condition:** If opponent concedes $\delta$, the agent concedes $\delta \cdot \gamma$ (where $\gamma$ is a "generosity factor").
+* **Boulware vs. Conceder:** Use a "Boulware" strategy (hold firm early, concede late) for high-margin electronics and a "Conceder" strategy for perishable or high-inventory fashion.
+
+---
+
+## 4. Phase 2: ONDC/Beckn Integration
+
+*Developer Instruction: Map negotiation turns to Beckn Protocol API lifecycle states.*
+
+| Stage | Beckn API | Agent Action |
+| --- | --- | --- |
+| **Discovery** | `/search` $\rightarrow$ `/on_search` | Present "Anchor Price" as the starting point. |
+| **Bilateral Haggle** | `/select` $\rightarrow$ `/on_select` | The agent sends a `quote` object with a `ttl` (Time-to-Live) of 300s to create urgency. |
+| **Initialization** | `/init` $\rightarrow$ `/on_init` | Final counter-offers are exchanged here before locking the transaction. |
+| **Agreement** | `/confirm` | Generate a **Digitally Signed Bilateral Transaction** contract. |
+
+---
+
+## 5. Phase 3: Cultural Persona & Dialogue (Hinglish Mode)
+
+*Developer Instruction: Prompt the LLM with a "Bhaiya" persona and "Explainable AI" rationale.*
+
+### 5.1 The "Bhaiya" Persona Instruction
+
+"You are a savvy Indian shopkeeper. Use **Hinglish** (code-mixed Hindi/English). Be warm but firm. Use phatic tokens like 'Arre madam' or 'Sahi rate lagao'. Never reveal your floor price ($R_s$)."
+
+### 5.2 Rationale Chips (XAI)
+
+Every price offer must include a JSON field `rationale` for the frontend to display:
+
+* **Example Output:** `{"price": 450, "rationale": "Special discount for buying 2 units", "sentiment": "friendly"}`.
+
+---
+
+## 6. Phase 4: Frontend & UX (Presentation Layer)
+
+*Developer Instruction: Build a high-fidelity mobile-first React interface for the hackathon.*
+
+### 6.1 UI Components
+
+* **The Negotiation Drawer:** A **Bottom Sheet** component that overlays the product page when the "Negotiate" button is clicked.
+* **The "Walk-Away" Vector:** Detect "Exit Intent" (swipe down or hover over close). Trigger a "Flinch" animation and a "Wait! Last price ₹X" popover.
+* **Confidence Meter:** A visual slider showing the "Fairness Score" of the current offer between $P_{anchor}$ and $R_{expected}$.
+
+### 6.2 Auditory Trust (The "Soundbox" Effect)
+
+When the deal confirms, play a distinct audio clip: "Deal Done! ₹250 saved!" This mimics the **Paytm Soundbox**, the gold standard of digital trust in India.
+
+---
+
+## 7. Edge Cases & Safety Guardrails
+
+* **Hallucination Block:** Use a deterministic validator. If the LLM generates a price $P < R_s$, the system must automatically override it with $R_s$ and a "Final Price" warning.
+* **Bot-on-Bot Collusion:** Implement a **Rate-Limiter** to prevent adversarial agents from draining the seller's margin through high-frequency bidding.
+* **Graceful Degradation:** If the LLM inference exceeds 2 seconds, default to a rule-based "Flat 5% Discount" to maintain the UX flow.
+
+---
+
+## 8. Success Metrics (KPIs)
+
+* **Conversion Lift:** Measure the delta between users who see a fixed price vs. users who engage the Mol-Bhav agent.
+* **Average Order Value (AOV):** Measure the effectiveness of "Bundle Negotiation" (e.g., "Buy 3 for 20% off").
+* **Agreement Rate:** Target $>30\%$ successful negotiations within 10 turns.
