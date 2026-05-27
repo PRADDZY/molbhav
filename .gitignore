@@ -15,6 +15,9 @@ frontend/dist/
 dist/
 build/
 *.egg-info/
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
 
 .DS_Store
 Thumbs.db
