@@ -19,5 +19,8 @@ build/
 frontend/vite.config.js
 frontend/vite.config.d.ts
 
+cloudflare/worker/.wrangler/
+cloudflare/worker/.dev.vars
+
 .DS_Store
 Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "name": "molbhav-cloudflare-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --env preview",
+    "deploy:preview": "wrangler deploy --env preview",
+    "deploy:production": "wrangler deploy --env production",
+    "db:migrate:preview": "wrangler d1 migrations apply MOLBHAV_DB --env preview",
+    "db:migrate:production": "wrangler d1 migrations apply MOLBHAV_DB --env production",
+    "db:seed:preview": "wrangler d1 execute MOLBHAV_DB --env preview --file ./seeds/seed_products.sql",
+    "db:seed:production": "wrangler d1 execute MOLBHAV_DB --env production --file ./seeds/seed_products.sql",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260524.0",
+    "typescript": "^5.6.2",
+    "wrangler": "^4.22.0"
+  }
+}

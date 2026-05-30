@@ -39,6 +39,15 @@ npm run dev
 ```
 Frontend runs at `http://localhost:5173`.
 
+## Cloudflare Deployment
+
+Cloudflare-native deployment is available with:
+- Worker API in `cloudflare/worker`
+- Pages frontend from `frontend`
+- D1 + KV + Durable Objects for data, cooldowns/rate limit, and per-session locking
+
+See [DEPLOYMENT_CLOUDFLARE.md](DEPLOYMENT_CLOUDFLARE.md) for full setup.
+
 ## Tests
 ```powershell
 pytest -q
@@ -55,4 +64,3 @@ pytest -q
 ## Notes
 - This repository intentionally avoids copying from prior codebase artifacts.
 - If Mongo/Redis are unavailable, the app falls back to in-memory mode so hackathon demos are still runnable locally.
-
