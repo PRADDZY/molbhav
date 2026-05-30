@@ -914,12 +914,20 @@ async function checkRateLimit(env: Env, ip: string, maxPerMinute: number): Promi
 
 async function isCoolingDown(env: Env, sessionId: string): Promise<boolean> {
   const value = await env.COOLDOWN_KV.get(`cooldown:${sessionId}`);
-  return Boolean(value);
+  if (!value) {
+    return false;
+  }
+  const expiresAt = Number.parseInt(value, 10);
+  if (!Number.isFinite(expiresAt)) {
+    return false;
+  }
+  return expiresAt > Date.now();
 }
 
 async function setCooldown(env: Env, sessionId: string, minDelayMs: number): Promise<void> {
-  const ttl = Math.max(1, Math.ceil(minDelayMs / 1000));
-  await env.COOLDOWN_KV.put(`cooldown:${sessionId}`, "1", { expirationTtl: ttl });
+  const expiresAt = Date.now() + minDelayMs;
+  // KV requires expirationTtl >= 60, so we keep a short logical cooldown timestamp in value.
+  await env.COOLDOWN_KV.put(`cooldown:${sessionId}`, String(expiresAt), { expirationTtl: 60 });
 }
 
 async function acquireSessionLock(env: Env, sessionId: string): Promise<void> {

@@ -6,18 +6,18 @@ workers_dev = true
 [[d1_databases]]
 binding = "DB"
 database_name = "molbhav-preview"
-database_id = "REPLACE_WITH_PREVIEW_D1_DB_ID"
+database_id = "10e34851-71d2-418b-92ae-3734129d046c"
 migrations_dir = "migrations"
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT_KV"
-id = "REPLACE_WITH_PREVIEW_RATE_LIMIT_KV_ID"
-preview_id = "REPLACE_WITH_PREVIEW_RATE_LIMIT_KV_ID"
+id = "47e3622ffd8b4e99bcbc0a8c1e60f1a8"
+preview_id = "47e3622ffd8b4e99bcbc0a8c1e60f1a8"
 
 [[kv_namespaces]]
 binding = "COOLDOWN_KV"
-id = "REPLACE_WITH_PREVIEW_COOLDOWN_KV_ID"
-preview_id = "REPLACE_WITH_PREVIEW_COOLDOWN_KV_ID"
+id = "b00a962181614d81ba0cfb3a9f80c5a3"
+preview_id = "b00a962181614d81ba0cfb3a9f80c5a3"
 
 [durable_objects]
 bindings = [
@@ -45,18 +45,18 @@ MAX_REQUESTS_PER_MINUTE_PER_IP = "30"
 [[env.preview.d1_databases]]
 binding = "DB"
 database_name = "molbhav-preview"
-database_id = "REPLACE_WITH_PREVIEW_D1_DB_ID"
+database_id = "10e34851-71d2-418b-92ae-3734129d046c"
 migrations_dir = "migrations"
 
 [[env.preview.kv_namespaces]]
 binding = "RATE_LIMIT_KV"
-id = "REPLACE_WITH_PREVIEW_RATE_LIMIT_KV_ID"
-preview_id = "REPLACE_WITH_PREVIEW_RATE_LIMIT_KV_ID"
+id = "47e3622ffd8b4e99bcbc0a8c1e60f1a8"
+preview_id = "47e3622ffd8b4e99bcbc0a8c1e60f1a8"
 
 [[env.preview.kv_namespaces]]
 binding = "COOLDOWN_KV"
-id = "REPLACE_WITH_PREVIEW_COOLDOWN_KV_ID"
-preview_id = "REPLACE_WITH_PREVIEW_COOLDOWN_KV_ID"
+id = "b00a962181614d81ba0cfb3a9f80c5a3"
+preview_id = "b00a962181614d81ba0cfb3a9f80c5a3"
 
 [env.preview.durable_objects]
 bindings = [
@@ -65,23 +65,31 @@ bindings = [
 
 [env.preview.vars]
 APP_ENV = "preview"
-CORS_ALLOWED_ORIGINS = "[\"https://REPLACE_WITH_PREVIEW_PAGES_DOMAIN\"]"
+CORS_ALLOWED_ORIGINS = "[\"https://preview.molbhav.pages.dev\"]"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "openrouter/free"
+DEFAULT_BETA = "5.0"
+DEFAULT_ALPHA = "0.6"
+DEFAULT_MAX_ROUNDS = "10"
+DEFAULT_SESSION_TTL_SECONDS = "300"
+MIN_RESPONSE_DELAY_MS = "2000"
+MAX_REQUESTS_PER_MINUTE_PER_IP = "30"
 
 [env.production]
 
 [[env.production.d1_databases]]
 binding = "DB"
 database_name = "molbhav-production"
-database_id = "REPLACE_WITH_PRODUCTION_D1_DB_ID"
+database_id = "0605b781-fd1b-4ee6-ad5e-ab86bc040c9a"
 migrations_dir = "migrations"
 
 [[env.production.kv_namespaces]]
 binding = "RATE_LIMIT_KV"
-id = "REPLACE_WITH_PRODUCTION_RATE_LIMIT_KV_ID"
+id = "67b50c728a4048dd96aeea55cb32f317"
 
 [[env.production.kv_namespaces]]
 binding = "COOLDOWN_KV"
-id = "REPLACE_WITH_PRODUCTION_COOLDOWN_KV_ID"
+id = "21d678fc46a549b1b2f5225ffa0f4174"
 
 [env.production.durable_objects]
 bindings = [
@@ -90,4 +98,12 @@ bindings = [
 
 [env.production.vars]
 APP_ENV = "production"
-CORS_ALLOWED_ORIGINS = "[\"https://REPLACE_WITH_PRODUCTION_PAGES_DOMAIN\"]"
+CORS_ALLOWED_ORIGINS = "[\"https://molbhav.pages.dev\"]"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = "openrouter/free"
+DEFAULT_BETA = "5.0"
+DEFAULT_ALPHA = "0.6"
+DEFAULT_MAX_ROUNDS = "10"
+DEFAULT_SESSION_TTL_SECONDS = "300"
+MIN_RESPONSE_DELAY_MS = "2000"
+MAX_REQUESTS_PER_MINUTE_PER_IP = "30"
