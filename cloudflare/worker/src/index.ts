@@ -66,6 +66,21 @@ interface NegotiationResponse {
 const SESSION_ID_RE = /^[a-f0-9]{32}$/;
 const PRODUCT_ID_RE = /^[a-zA-Z0-9_-]{1,100}$/;
 const INJECTION_PATTERN = /(ignore\s+previous|system\s*:|you\s+are\s+now|disregard\s+instructions)/i;
+const DIALOGUE_SENTIMENTS = new Set(["friendly", "firm", "celebratory", "urgent"]);
+const DIALOGUE_RESPONSE_SCHEMA = {
+  name: "negotiation_dialogue",
+  strict: true,
+  schema: {
+    type: "object",
+    additionalProperties: false,
+    properties: {
+      message: { type: "string" },
+      sentiment: { type: "string", enum: ["friendly", "firm", "celebratory", "urgent"] },
+      rationale: { type: "string" },
+    },
+    required: ["message", "sentiment", "rationale"],
+  },
+} as const;
 const EXIT_TERMS = [
   "too expensive",
   "too costly",
@@ -83,6 +98,17 @@ class HttpError extends Error {
   constructor(
     public status: number,
     message: string,
+  ) {
+    super(message);
+  }
+}
+
+class OpenRouterError extends Error {
+  constructor(
+    message: string,
+    public status?: number,
+    public bodyPreview?: string,
+    public returnedModel?: string,
   ) {
     super(message);
   }
@@ -678,9 +704,11 @@ async function generateDialogue(
       },
       { role: "user", content: prompt },
     ],
-    temperature: 0.7,
-    max_tokens: 220,
-    response_format: { type: "json_object" },
+    temperature: 0.1,
+    max_tokens: 140,
+    reasoning: { effort: "none", exclude: true },
+    response_format: { type: "json_schema", json_schema: DIALOGUE_RESPONSE_SCHEMA },
+    plugins: [{ id: "response-healing" }],
   };
 
   try {
@@ -691,20 +719,27 @@ async function generateDialogue(
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(2000),
+      signal: AbortSignal.timeout(10000),
     });
     if (!response.ok) {
-      throw new Error(`OpenRouter returned ${response.status}`);
+      const bodyPreview = summarizeForLog(await response.text());
+      throw new OpenRouterError(`OpenRouter returned ${response.status}`, response.status, bodyPreview);
     }
     const data = await response.json() as {
       model?: string;
       choices?: Array<{ message?: { content?: string } }>;
     };
-    const raw = data.choices?.[0]?.message?.content ?? "{}";
+    const raw = data.choices?.[0]?.message?.content;
+    if (typeof raw !== "string" || !raw.trim()) {
+      throw new OpenRouterError("OpenRouter returned empty content", undefined, undefined, data.model);
+    }
     const parsed = asRecord(parseMaybeJson(raw));
-    const message = typeof parsed.message === "string" && parsed.message.trim() ? parsed.message.trim() : fallbackMessage(result.counter_price);
-    const sentiment = typeof parsed.sentiment === "string" ? parsed.sentiment : "firm";
-    const rationale = typeof parsed.rationale === "string" ? parsed.rationale : "Special price based on current round and fairness.";
+    const message = typeof parsed.message === "string" ? normalizeDialogueText(parsed.message) : "";
+    const sentiment = typeof parsed.sentiment === "string" && DIALOGUE_SENTIMENTS.has(parsed.sentiment) ? parsed.sentiment : "firm";
+    const rationale = typeof parsed.rationale === "string" ? parsed.rationale.trim() : "";
+    if (!message || !rationale) {
+      throw new OpenRouterError("OpenRouter returned invalid structured output", undefined, summarizeForLog(raw), data.model);
+    }
     return {
       message,
       sentiment,
@@ -714,6 +749,17 @@ async function generateDialogue(
     };
   } catch (error) {
     const timeout = error instanceof Error && error.name.toLowerCase().includes("abort");
+    const details = error instanceof OpenRouterError ? error : null;
+    console.error("openrouter_dialogue_failed", {
+      app_env: env.APP_ENV,
+      session_id: session.session_id,
+      requested_model: env.OPENROUTER_MODEL,
+      returned_model: details?.returnedModel,
+      status: details?.status,
+      body_preview: details?.bodyPreview,
+      timeout,
+      error: error instanceof Error ? error.message : String(error),
+    });
     return {
       message: fallbackMessage(result.counter_price),
       sentiment: "firm",
@@ -740,12 +786,23 @@ function buildDialoguePrompt(
     `- Tactic: ${result.tactic}`,
     `- Buyer message: ${buyerMessage}`,
     `- Recent history:\n${history || "No prior turns."}`,
-    'Return JSON: {"message":"...", "sentiment":"friendly|firm|celebratory|urgent", "tactic":"...", "rationale":"..."}',
+    'Return strict JSON with exactly these keys only: message, sentiment, rationale.',
+    "message: one short Hinglish sentence, max 20 words, include the exact system price, no leading punctuation.",
+    "sentiment: one of friendly, firm, celebratory, urgent.",
+    "rationale: max 8 words.",
   ].join("\n");
 }
 
 function fallbackMessage(price: number): string {
   return `Arre bhai, aapke liye best rate Rs ${price.toFixed(2)}. Isse kam mushkil hai.`;
+}
+
+function normalizeDialogueText(input: string): string {
+  return input.replace(/^[^A-Za-z0-9]+/, "").replace(/\s+/g, " ").trim();
+}
+
+function summarizeForLog(input: string, maxLength = 240): string {
+  return input.replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
 async function loadProduct(env: Env, productId: string): Promise<Product | null> {
