@@ -385,6 +385,7 @@ async function startNegotiation(request: Request, env: Env): Promise<Response> {
       model: openingMessage.model,
       provider: openingMessage.provider,
       rationale: openingMessage.rationale,
+      effective_alpha: computeEffectiveAlpha(session.alpha, 0, session.max_rounds),
     },
   };
 
@@ -467,6 +468,7 @@ async function makeOffer(request: Request, env: Env, sessionId: string): Promise
       counter_price: engine.counter_price,
       state: engine.state,
       tactic: engine.tactic,
+      effective_alpha: engine.effective_alpha,
       exit_intent: exitIntent.trigger,
       model: dialogue.model,
     });
@@ -490,6 +492,7 @@ async function makeOffer(request: Request, env: Env, sessionId: string): Promise
         provider: dialogue.provider,
         rationale: dialogue.rationale,
         exit_intent: exitIntent.trigger,
+        effective_alpha: engine.effective_alpha,
       },
     };
 
@@ -526,10 +529,11 @@ function runNegotiationTurn(
   buyerPrice: number,
   buyerMessage: string,
   exitIntent: { isLeaving: boolean; confidence: number; trigger: string },
-): { counter_price: number; tactic: string; state: NegotiationState } {
+): { counter_price: number; tactic: string; state: NegotiationState; effective_alpha: number } {
   session.current_round += 1;
   session.state = "responding";
   const now = new Date().toISOString();
+  const effectiveAlpha = computeEffectiveAlpha(session.alpha, session.current_round, session.max_rounds);
 
   const buyerOffers = session.offer_history.filter((offer) => offer.actor === "buyer");
   const previousBuyer = buyerOffers.length ? buyerOffers[buyerOffers.length - 1].price : null;
@@ -552,6 +556,7 @@ function runNegotiationTurn(
         counter_price: session.reservation_price,
         tactic: "walk_away_failed",
         state: session.state,
+        effective_alpha: effectiveAlpha,
       };
     }
 
@@ -571,6 +576,7 @@ function runNegotiationTurn(
       counter_price: validated.price,
       tactic: "walk_away_save",
       state: session.state,
+      effective_alpha: effectiveAlpha,
     };
   }
 
@@ -583,6 +589,7 @@ function runNegotiationTurn(
       counter_price: session.agreed_price,
       tactic: "accept",
       state: session.state,
+      effective_alpha: effectiveAlpha,
     };
   }
 
@@ -593,11 +600,12 @@ function runNegotiationTurn(
       counter_price: session.reservation_price,
       tactic: "timeout_final",
       state: session.state,
+      effective_alpha: effectiveAlpha,
     };
   }
 
   const currentPrice = session.current_seller_price || session.anchor_price;
-  const aiDrop = computeAiConcession(session.offer_history, session.alpha, Math.max(1, Math.abs(session.anchor_price - session.reservation_price) * 0.1));
+  const aiDrop = computeAiConcession(session.offer_history, effectiveAlpha, Math.max(1, Math.abs(session.anchor_price - session.reservation_price) * 0.1));
   const mirrored = currentPrice - aiDrop;
   const candidate = Math.min(currentPrice, Math.max(baseline, mirrored));
   const validated = validatePrice(candidate, session.reservation_price, session.anchor_price);
@@ -617,6 +625,7 @@ function runNegotiationTurn(
     counter_price: validated.price,
     tactic: classifyTactic(currentPrice, validated.price, session.anchor_price, session.reservation_price),
     state: session.state,
+    effective_alpha: effectiveAlpha,
   };
 }
 
@@ -646,6 +655,18 @@ function computeAiConcession(offers: Offer[], alpha: number, maxConcession: numb
     return 0;
   }
   return round2(Math.min(maxConcession, alpha * avg));
+}
+
+function computeEffectiveAlpha(baseAlpha: number, currentRound: number, maxRounds: number): number {
+  const clampedBase = Math.min(1, Math.max(0, baseAlpha));
+  if (maxRounds <= 0 || currentRound <= 0) {
+    return round2(clampedBase);
+  }
+
+  const relativeTime = Math.min(currentRound, maxRounds) / maxRounds;
+  const lateRamp = Math.max(0, relativeTime - 0.5) * 2;
+  const adjusted = clampedBase + (1 - clampedBase) * lateRamp;
+  return round2(Math.min(1, Math.max(0, adjusted)));
 }
 
 function classifyTactic(currentPrice: number, newPrice: number, anchor: number, reservation: number): string {
