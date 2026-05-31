@@ -274,10 +274,6 @@ export default function App() {
                     <p>Savings</p>
                     <strong>{inr(savings)}</strong>
                   </article>
-                  <article>
-                    <p>Turns Left</p>
-                    <strong>{Math.max(maxRounds - round, 0)}</strong>
-                  </article>
                 </div>
               </section>
 
