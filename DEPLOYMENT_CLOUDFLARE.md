@@ -16,8 +16,9 @@ This repository now supports Cloudflare-first deployment:
    - `CLOUDFLARE_API_TOKEN`
    - `CLOUDFLARE_ACCOUNT_ID`
    - `CF_PAGES_PROJECT_NAME`
-3. OpenRouter secret for Worker runtime:
-   - `OPENROUTER_API_KEY`
+3. LLM provider secrets for Worker runtime:
+   - `GROQ_API_KEY` (primary)
+   - `OPENROUTER_API_KEY` (secondary fallback)
 4. Admin mutation secret for product updates:
    - `API_ADMIN_KEY`
 
@@ -37,6 +38,8 @@ Create secrets in both environments:
 cd cloudflare/worker
 npx wrangler secret put OPENROUTER_API_KEY --env preview
 npx wrangler secret put OPENROUTER_API_KEY --env production
+npx wrangler secret put GROQ_API_KEY --env preview
+npx wrangler secret put GROQ_API_KEY --env production
 npx wrangler secret put API_ADMIN_KEY --env preview
 npx wrangler secret put API_ADMIN_KEY --env production
 ```
@@ -85,7 +88,8 @@ Behavior:
   - `GET /health`
 - Session calls require `X-Session-Token`.
 - CORS is explicit via `CORS_ALLOWED_ORIGINS`.
-- OpenRouter timeout triggers deterministic fallback messaging.
+- LLM chain is Groq -> OpenRouter -> deterministic fallback.
+- Response metadata includes `provider` for traceability (`groq`, `openrouter`, `rule-fallback`).
 
 ## 6) Smoke Test Checklist
 
@@ -95,11 +99,11 @@ After each deployment:
 2. `GET /api/v1/products` returns seeded products.
 3. `POST /api/v1/negotiate/start` returns `session_id` + `session_token`.
 4. `POST /api/v1/negotiate/{session_id}/offer` accepts valid token.
-5. UI flow on Pages can start and complete a negotiation.
+5. `metadata.provider` is `groq` or `openrouter` in normal flow, and `rule-fallback` only on dual-provider failure.
+6. UI flow on Pages can start and complete a negotiation.
 
 ## 7) Rollback
 
 - Worker rollback: deploy previous git commit with `npx wrangler deploy --env production`.
 - Pages rollback: redeploy a previous successful commit from Pages dashboard.
 - D1 schema rollback: apply a rollback migration (do not mutate schema manually in production).
-

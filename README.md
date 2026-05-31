@@ -8,7 +8,7 @@ Clean-room Outskill hackathon implementation of the MolBhav AI Negotiation Engin
   - Tit-for-tat reciprocity (`alpha`)
   - Reservation floor validator
   - Walk-away rescue behavior
-- OpenRouter-backed Hinglish response layer with strict JSON parsing and fallback.
+- Groq-first Hinglish response layer with OpenRouter failover and deterministic fallback.
 - MongoDB-backed products/sessions/logs (with local in-memory fallback if Mongo is offline).
 - Redis-backed rate limit, cooldown, and session lock guardrails (with local in-memory fallback).
 - Vite + React frontend:

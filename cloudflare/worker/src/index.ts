@@ -81,6 +81,18 @@ const DIALOGUE_RESPONSE_SCHEMA = {
     required: ["message", "sentiment", "rationale"],
   },
 } as const;
+type LlmProvider = "groq" | "openrouter" | "rule-fallback";
+type UpstreamLlmProvider = Exclude<LlmProvider, "rule-fallback">;
+
+interface DialogueResult {
+  message: string;
+  sentiment: string;
+  rationale: string;
+  timed_out: boolean;
+  model: string;
+  provider: LlmProvider;
+}
+
 const EXIT_TERMS = [
   "too expensive",
   "too costly",
@@ -103,8 +115,9 @@ class HttpError extends Error {
   }
 }
 
-class OpenRouterError extends Error {
+class LlmProviderError extends Error {
   constructor(
+    public provider: UpstreamLlmProvider,
     message: string,
     public status?: number,
     public bodyPreview?: string,
@@ -370,6 +383,7 @@ async function startNegotiation(request: Request, env: Env): Promise<Response> {
     agreed_price: null,
     metadata: {
       model: openingMessage.model,
+      provider: openingMessage.provider,
       rationale: openingMessage.rationale,
     },
   };
@@ -473,6 +487,7 @@ async function makeOffer(request: Request, env: Env, sessionId: string): Promise
       agreed_price: freshSession.agreed_price,
       metadata: {
         model: dialogue.model,
+        provider: dialogue.provider,
         rationale: dialogue.rationale,
         exit_intent: exitIntent.trigger,
       },
@@ -682,92 +697,191 @@ async function generateDialogue(
   result: { counter_price: number; tactic: string; state: NegotiationState },
   buyerMessage: string,
   language = "en",
-): Promise<{ message: string; sentiment: string; rationale: string; timed_out: boolean; model: string }> {
-  if (!env.OPENROUTER_API_KEY) {
-    return {
-      message: fallbackMessage(result.counter_price),
-      sentiment: "firm",
-      rationale: "No OpenRouter key configured.",
-      timed_out: false,
-      model: "rule-fallback",
-    };
+): Promise<DialogueResult> {
+  const prompt = buildDialoguePrompt(session, result, buyerMessage, language);
+  const providerOrder = resolveProviderOrder(env.LLM_PROVIDER_ORDER);
+  let attemptedProvider = false;
+  let sawTimeout = false;
+
+  for (const provider of providerOrder) {
+    if (!isProviderConfigured(env, provider)) {
+      continue;
+    }
+    attemptedProvider = true;
+    try {
+      if (provider === "groq") {
+        return await callGroqDialogue(env, prompt);
+      }
+      return await callOpenRouterDialogue(env, prompt);
+    } catch (error) {
+      const timeout = isTimeoutError(error);
+      sawTimeout = sawTimeout || timeout;
+      logProviderFailure(env, session.session_id, provider, error, timeout);
+    }
   }
 
-  const prompt = buildDialoguePrompt(session, result, buyerMessage, language);
+  const rationale = !attemptedProvider
+    ? "No LLM provider key configured."
+    : sawTimeout
+      ? "LLM timed out."
+      : "LLM request failed.";
+
+  return {
+    message: fallbackMessage(result.counter_price),
+    sentiment: "firm",
+    rationale,
+    timed_out: sawTimeout,
+    model: "rule-fallback",
+    provider: "rule-fallback",
+  };
+}
+
+async function callOpenRouterDialogue(env: Env, prompt: string): Promise<DialogueResult> {
   const payload = {
     model: env.OPENROUTER_MODEL,
-    messages: [
-      {
-        role: "system",
-        content:
-          "You are a savvy Indian shopkeeper speaking Hinglish. Be warm but firm. Never reveal reservation price. Return strict JSON only.",
-      },
-      { role: "user", content: prompt },
-    ],
+    messages: buildProviderMessages(prompt),
     temperature: 0.1,
     max_tokens: 140,
     reasoning: { effort: "none", exclude: true },
     response_format: { type: "json_schema", json_schema: DIALOGUE_RESPONSE_SCHEMA },
     plugins: [{ id: "response-healing" }],
   };
+  const data = await callChatCompletions({
+    provider: "openrouter",
+    baseUrl: env.OPENROUTER_BASE_URL,
+    apiKey: env.OPENROUTER_API_KEY ?? "",
+    requestedModel: env.OPENROUTER_MODEL,
+    payload,
+  });
+  return parseDialogueResponseContent("openrouter", env.OPENROUTER_MODEL, data);
+}
 
-  try {
-    const response = await fetch(`${env.OPENROUTER_BASE_URL}/chat/completions`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.OPENROUTER_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(10000),
-    });
-    if (!response.ok) {
-      const bodyPreview = summarizeForLog(await response.text());
-      throw new OpenRouterError(`OpenRouter returned ${response.status}`, response.status, bodyPreview);
-    }
-    const data = await response.json() as {
-      model?: string;
-      choices?: Array<{ message?: { content?: string } }>;
-    };
-    const raw = data.choices?.[0]?.message?.content;
-    if (typeof raw !== "string" || !raw.trim()) {
-      throw new OpenRouterError("OpenRouter returned empty content", undefined, undefined, data.model);
-    }
-    const parsed = asRecord(parseMaybeJson(raw));
-    const message = typeof parsed.message === "string" ? normalizeDialogueText(parsed.message) : "";
-    const sentiment = typeof parsed.sentiment === "string" && DIALOGUE_SENTIMENTS.has(parsed.sentiment) ? parsed.sentiment : "firm";
-    const rationale = typeof parsed.rationale === "string" ? parsed.rationale.trim() : "";
-    if (!message || !rationale) {
-      throw new OpenRouterError("OpenRouter returned invalid structured output", undefined, summarizeForLog(raw), data.model);
-    }
-    return {
-      message,
-      sentiment,
-      rationale,
-      timed_out: false,
-      model: data.model ?? env.OPENROUTER_MODEL,
-    };
-  } catch (error) {
-    const timeout = error instanceof Error && error.name.toLowerCase().includes("abort");
-    const details = error instanceof OpenRouterError ? error : null;
-    console.error("openrouter_dialogue_failed", {
-      app_env: env.APP_ENV,
-      session_id: session.session_id,
-      requested_model: env.OPENROUTER_MODEL,
-      returned_model: details?.returnedModel,
-      status: details?.status,
-      body_preview: details?.bodyPreview,
-      timeout,
-      error: error instanceof Error ? error.message : String(error),
-    });
-    return {
-      message: fallbackMessage(result.counter_price),
-      sentiment: "firm",
-      rationale: timeout ? "LLM timed out." : "LLM request failed.",
-      timed_out: timeout,
-      model: "rule-fallback",
-    };
+async function callGroqDialogue(env: Env, prompt: string): Promise<DialogueResult> {
+  const payload = {
+    model: env.GROQ_MODEL,
+    messages: buildProviderMessages(prompt),
+    temperature: 0.1,
+    max_tokens: 400,
+    reasoning_effort: "low",
+  };
+  const data = await callChatCompletions({
+    provider: "groq",
+    baseUrl: env.GROQ_BASE_URL,
+    apiKey: env.GROQ_API_KEY ?? "",
+    requestedModel: env.GROQ_MODEL,
+    payload,
+  });
+  return parseDialogueResponseContent("groq", env.GROQ_MODEL, data);
+}
+
+function buildProviderMessages(prompt: string): Array<{ role: "system" | "user"; content: string }> {
+  return [
+    {
+      role: "system",
+      content:
+        "You are a savvy Indian shopkeeper speaking Hinglish. Be warm but firm. Never reveal reservation price. Return strict JSON only.",
+    },
+    { role: "user", content: prompt },
+  ];
+}
+
+async function callChatCompletions(input: {
+  provider: UpstreamLlmProvider;
+  baseUrl: string;
+  apiKey: string;
+  requestedModel: string;
+  payload: Record<string, unknown>;
+}): Promise<{ model?: string; choices?: Array<{ message?: { content?: string } }> }> {
+  const response = await fetch(`${input.baseUrl}/chat/completions`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${input.apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(input.payload),
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!response.ok) {
+    const bodyPreview = summarizeForLog(await response.text());
+    throw new LlmProviderError(input.provider, `${input.provider} returned ${response.status}`, response.status, bodyPreview);
   }
+  return await response.json() as {
+    model?: string;
+    choices?: Array<{ message?: { content?: string } }>;
+  };
+}
+
+function parseDialogueResponseContent(
+  provider: UpstreamLlmProvider,
+  requestedModel: string,
+  data: { model?: string; choices?: Array<{ message?: { content?: string } }> },
+): DialogueResult {
+  const raw = data.choices?.[0]?.message?.content;
+  if (typeof raw !== "string" || !raw.trim()) {
+    throw new LlmProviderError(provider, `${provider} returned empty content`, undefined, undefined, data.model);
+  }
+  const parsed = asRecord(parseMaybeJson(raw));
+  const message = typeof parsed.message === "string" ? normalizeDialogueText(parsed.message) : "";
+  const sentiment = typeof parsed.sentiment === "string" && DIALOGUE_SENTIMENTS.has(parsed.sentiment) ? parsed.sentiment : "firm";
+  const rationale = typeof parsed.rationale === "string" ? parsed.rationale.trim() : "";
+  if (!message || !rationale) {
+    throw new LlmProviderError(provider, `${provider} returned invalid structured output`, undefined, summarizeForLog(raw), data.model);
+  }
+  return {
+    message,
+    sentiment,
+    rationale,
+    timed_out: false,
+    model: data.model ?? requestedModel,
+    provider,
+  };
+}
+
+function isProviderConfigured(env: Env, provider: UpstreamLlmProvider): boolean {
+  if (provider === "groq") {
+    return Boolean(env.GROQ_API_KEY);
+  }
+  return Boolean(env.OPENROUTER_API_KEY);
+}
+
+function resolveProviderOrder(config: string | undefined): UpstreamLlmProvider[] {
+  const defaults: UpstreamLlmProvider[] = ["groq", "openrouter"];
+  if (!config?.trim()) {
+    return defaults;
+  }
+  const normalized = config
+    .split(",")
+    .map((item) => item.trim().toLowerCase())
+    .filter((item): item is UpstreamLlmProvider => item === "groq" || item === "openrouter");
+  if (!normalized.length) {
+    return defaults;
+  }
+  return Array.from(new Set(normalized));
+}
+
+function isTimeoutError(error: unknown): boolean {
+  return error instanceof Error && error.name.toLowerCase().includes("abort");
+}
+
+function logProviderFailure(
+  env: Env,
+  sessionId: string,
+  provider: UpstreamLlmProvider,
+  error: unknown,
+  timeout: boolean,
+): void {
+  const details = error instanceof LlmProviderError ? error : null;
+  console.error(`${provider}_dialogue_failed`, {
+    app_env: env.APP_ENV,
+    session_id: sessionId,
+    provider,
+    requested_model: provider === "groq" ? env.GROQ_MODEL : env.OPENROUTER_MODEL,
+    returned_model: details?.returnedModel,
+    status: details?.status,
+    body_preview: details?.bodyPreview,
+    timeout,
+    error: error instanceof Error ? error.message : String(error),
+  });
 }
 
 function buildDialoguePrompt(

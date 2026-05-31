@@ -8,6 +8,10 @@ declare namespace Cloudflare {
     OPENROUTER_API_KEY?: string;
     OPENROUTER_BASE_URL: string;
     OPENROUTER_MODEL: string;
+    GROQ_API_KEY?: string;
+    GROQ_BASE_URL: string;
+    GROQ_MODEL: string;
+    LLM_PROVIDER_ORDER: string;
     API_ADMIN_KEY?: string;
 
     APP_ENV: string;
@@ -22,4 +26,3 @@ declare namespace Cloudflare {
 }
 
 interface Env extends Cloudflare.Env {}
-
